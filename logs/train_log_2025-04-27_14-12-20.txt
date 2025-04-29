@@ -1,0 +1,8 @@
+🚀 Training started at 2025-04-27_14-12-20
+🧠 DEVICE: cuda
+📊 Total Epochs: 10 | Batch Size: 32 | Teacher Forcing: 0.5
+
+📅 Epoch 1/10
+🕒 Time: 33m 17s | 🔥 Train Loss: 5.6139 | ✅ Val Loss: 5.8705
+
+📅 Epoch 2/10
