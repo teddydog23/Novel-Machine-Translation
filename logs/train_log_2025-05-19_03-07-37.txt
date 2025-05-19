@@ -1,0 +1,34 @@
+🚀 Training started at 2025-05-19_03-07-37
+🧠 DEVICE: cuda
+📊 Total Epochs: 10 | Batch Size: 32 | Teacher Forcing: 0.5
+
+📅 Epoch 1/10
+🕒 Time: 50m 28s | 🔥 Train Loss: 5.5492 | ✅ Val Loss: 5.8539
+
+📅 Epoch 2/10
+🕒 Time: 50m 11s | 🔥 Train Loss: 5.0975 | ✅ Val Loss: 5.7253
+
+📅 Epoch 3/10
+🕒 Time: 49m 44s | 🔥 Train Loss: 4.9575 | ✅ Val Loss: 5.6614
+
+📅 Epoch 4/10
+🕒 Time: 49m 47s | 🔥 Train Loss: 4.8865 | ✅ Val Loss: 5.6938
+
+📅 Epoch 5/10
+🕒 Time: 49m 45s | 🔥 Train Loss: 4.8476 | ✅ Val Loss: 5.6422
+
+📅 Epoch 6/10
+🕒 Time: 49m 44s | 🔥 Train Loss: 4.8205 | ✅ Val Loss: 5.6642
+
+📅 Epoch 7/10
+🕒 Time: 49m 46s | 🔥 Train Loss: 4.8106 | ✅ Val Loss: 5.6881
+
+📅 Epoch 8/10
+🕒 Time: 49m 49s | 🔥 Train Loss: 4.8237 | ✅ Val Loss: 5.6933
+
+📅 Epoch 9/10
+🕒 Time: 49m 53s | 🔥 Train Loss: 4.7347 | ✅ Val Loss: 5.6285
+
+📅 Epoch 10/10
+🕒 Time: 50m 45s | 🔥 Train Loss: 4.6947 | ✅ Val Loss: 5.6565
+✅ Training complete.
