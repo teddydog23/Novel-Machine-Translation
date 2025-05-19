@@ -3,7 +3,7 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from seq2seq_attention.attention import Attention
+from model.attention import Attention
 
 class Decoder(nn.Module):
     def __init__(self, embed_size, hidden_size, output_size,
