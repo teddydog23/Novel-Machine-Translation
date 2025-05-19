@@ -8,11 +8,8 @@ import torch.nn as nn
 #     criterion = nn.NLLLoss(ignore_index=pad_idx)
 #     return criterion(output, target)
 
-def get_loss(pad_idx, use_label_smoothing=True, smoothing=0.1):
-    if use_label_smoothing:
-        return nn.CrossEntropyLoss(ignore_index=pad_idx, label_smoothing=smoothing)
-    else:
-        return nn.NLLLoss(ignore_index=pad_idx)
+def get_loss(pad_idx, smoothing=0.1):
+    return nn.CrossEntropyLoss(ignore_index=pad_idx, label_smoothing=smoothing)
     
 def compute_loss(output, target, loss_fn):
     """

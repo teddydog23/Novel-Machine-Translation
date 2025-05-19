@@ -69,6 +69,19 @@ def preprocess_and_save(en_path, vi_path, save_path, batch_size=32, min_freq=2,
 
     assert len(en_lines) == len(vi_lines), "Số lượng câu không khớp!"
 
+    MAX_LEN = 80
+
+    filtered_en = []
+    filtered_vi = []
+
+    for en, vi in zip(en_lines, vi_lines):
+        if len(en.split()) <= MAX_LEN and len(vi.split()) <= MAX_LEN:
+            filtered_en.append(en)
+            filtered_vi.append(vi)
+
+    en_lines = filtered_en[:500000]
+    vi_lines = filtered_vi[:500000]
+
     print("Tokenizing...")
     tokenized_en = [tokenize_en(line) for line in en_lines]
     tokenized_vi = [tokenize_vi(line) for line in vi_lines]
@@ -82,7 +95,7 @@ def preprocess_and_save(en_path, vi_path, save_path, batch_size=32, min_freq=2,
     print("Creating full dataset...")
     full_dataset = TranslationDataset(en_lines, vi_lines, vocab_en, vocab_vi)
 
-    # 🔥 Chia tập train - val - test
+    # Chia tập train - val - test
     total_size = len(full_dataset)
     train_size = int(train_ratio * total_size)
     val_size = int(val_ratio * total_size)
@@ -96,7 +109,7 @@ def preprocess_and_save(en_path, vi_path, save_path, batch_size=32, min_freq=2,
         full_dataset, [train_size, val_size, test_size], generator=generator
     )
 
-    print(f"Saving to {save_path}")
+    print(f"💾 Saving to {save_path}")
     torch.save({
         "src_lines": {
             "train": [en_lines[i] for i in train_dataset.indices],
@@ -130,9 +143,9 @@ def preprocess_and_save(en_path, vi_path, save_path, batch_size=32, min_freq=2,
 # 🔧 Gọi hàm
 if __name__ == "__main__":
     preprocess_and_save(
-        en_path=r"D:\Machine Translation\dataset\total\combined.en",
-        vi_path=r"D:\Machine Translation\dataset\total\combined.vi",
-        save_path=r"D:\Machine Translation\dataset\total\processed_data.pt",
+        en_path=r"C:\Users\Admin\OneDrive - Hanoi University of Science and Technology\Desktop\NMT1\dataset\train\train.en",
+        vi_path=r"C:\Users\Admin\OneDrive - Hanoi University of Science and Technology\Desktop\NMT1\dataset\train\train.vi",
+        save_path=r"C:\Users\Admin\OneDrive - Hanoi University of Science and Technology\Desktop\NMT1\dataset\train\processed_data.pt",
         batch_size=32,
         min_freq=2
     )

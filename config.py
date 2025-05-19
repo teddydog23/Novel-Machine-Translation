@@ -3,7 +3,7 @@ import torch
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # Paths
-DATA_PATH = r"D:\NMT1\dataset\total\processed_data.pt"
+DATA_PATH = r"C:\Users\Admin\OneDrive - Hanoi University of Science and Technology\Desktop\NMT1\dataset\train\processed_data.pt"
 CHECKPOINT_DIR = "checkpoints"
 CHECKPOINT_PATH = f"{CHECKPOINT_DIR}/model.pt"
 

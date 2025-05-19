@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import os
 
-LOG_CSV_PATH = r"D:\NMT1\logs\train_metrics.csv"
+LOG_CSV_PATH = r"C:\Users\Admin\OneDrive - Hanoi University of Science and Technology\Desktop\NMT1\logs\train_metrics.csv"
 SAVE_DIR = "logs"
 
 def plot_metrics():
